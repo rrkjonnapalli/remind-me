@@ -24,9 +24,6 @@ export default {
     complete: function() {
       this.$emit("completed", this.reminder);
     }
-    // checkDrag(e) {
-    //   console.log(e);
-    // }
   }
 };
 </script>

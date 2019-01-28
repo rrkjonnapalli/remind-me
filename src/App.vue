@@ -1,6 +1,5 @@
 <template>
   <div class="container mt-5 mx-4">
-    <!-- <h2 class="text-center">Remind Me</h2> -->
     <div v-if="isInput">
       <add-reminder v-on:add-reminder="addReminder" v-on:close-input="toggleInput"></add-reminder>
     </div>
@@ -141,7 +140,6 @@ padding: .3em;
   font-weight: bold;
 }
 .card {
-  // display: flex;
   .my(10);
   padding: .8em;
   flex-direction: column;
@@ -327,7 +325,6 @@ each(@displays, {
   border: 0;
   font-size: 1.5em;
   font-family: 'Ubuntu', sans-serif;
-  // box-shadow: #e4e4e4 0px 2px 20px;
   resize: none;
   width: 100%;
   flex: 1;

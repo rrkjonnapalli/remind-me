@@ -1,10 +1,5 @@
 <template>
   <div>
-    <!-- <div v-if="!reminders.length && rtype!=='completed'">
-      <p class="lead text-center">Sorry no reminders available to show.</p>
-    </div>-->
-    <!-- <div class="list-group list-group-flush"> -->
-    <!-- class="list-group-item d-flex justify-content-between align-items-center" -->
     <div v-for="(reminder, idx) in reminders" :key="'div'+reminder.id">
       <drag
         class="drag"
@@ -18,7 +13,6 @@
           :reminder="reminder"
           :rtype="rtype"
           :name="idx"
-          @completed="processComplete($event, idx)"
         ></show-reminder>
       </drag>
     </div>
@@ -57,15 +51,10 @@ export default {
     return {deleting: false};
   },
   methods: {
-    processComplete: function(e, idx) {
-      e.index = idx;
-      this.$emit("completed", e);
-    },
     showInput: function() {
       this.$emit("show-input");
     },
     onDrop: function(e) {
-      // console.log(e);
       this.$emit("delete", e.idx);
       this.toggleDelete();
     },

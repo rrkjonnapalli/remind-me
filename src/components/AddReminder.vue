@@ -1,13 +1,5 @@
 <template>
   <div class="add-r">
-    <!-- <form @submit.prevent="addReminder">
-    <div class="input-group input-group-lg mb-3 shadow-lg">
-      <input type="text" class="form-control" name="reminder" id="reminder" v-model="reminder" autofocus>
-      <div class="input-group-append">
-        <button type="submit" class="bg-primary text-white input-group-text">Add reminder</button>
-      </div>
-    </div>
-    </form>-->
     <div>
       <ion-icon class="btn-close" name="close" @click="closeInput"></ion-icon>
     </div>
@@ -28,7 +20,6 @@
           <ion-icon name="calendar"></ion-icon>
         </button>
       </div>
-      <!-- <date-pick v-model="date" :inputAttributes="{readonly: true}"></date-pick> -->
     </div>
     <div>
       <button class="fixed-add-btn btn-block" @click="addReminder">
@@ -46,9 +37,6 @@
 
 export default {
   name: "AddReminder",
-  components: {
-    // DatePick
-  },
   data: function() {
     return {
       reminder: "",
